@@ -1,0 +1,41 @@
+/* pages/index/index.wxss */
+.index {
+    font-family: 'PingFang SC';
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50rpx;
+}
+
+.nav navigator {
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #EEE;
+    position: relative;
+}
+
+.nav navigator:after {
+    content: '>';
+    display: block;
+    position: absolute;
+    right: 3rpx;
+    top: 50%;
+    height: 40rpx;
+    line-height: 40rpx;
+    margin-top: -20rpx;
+    color: #999;
+}
+
+.nav navigator icon,
+.nav navigator text {
+    vertical-align: middle;
+}
+
+.nav navigator icon {
+    margin-right: 25rpx;
+}
+
+.clear {
+    margin: 100rpx 50rpx;
+}

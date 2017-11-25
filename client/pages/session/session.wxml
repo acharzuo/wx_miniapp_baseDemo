@@ -1,0 +1,16 @@
+<view class="lab https">
+    <view class="status">
+        <icon wx:if="{{status != 'success'}}" type="{{status}}" size="70" />
+        <image wx:if="{{status == 'success'}}" src="{{avatarUrl}}" mode="aspectFill" />
+    </view>
+    <view class="hint">
+        <view class="line">{{hintLine1}}</view>
+        <view class="line">{{hintLine2}}</view>
+    </view>
+    <view class="hint">
+        <view class="line">{{url}}</view>
+    </view>
+    <view class="command">
+        <button wx:if="{{status != 'success'}}" type="primary" bindtap="request" disabled="{{requesting}}">获取会话</button>
+    </view>
+</view>

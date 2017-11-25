@@ -1,0 +1,13 @@
+<view class="lab https">
+    <view class="status">
+        <icon type="{{status}}" size="70" />
+    </view>
+    <view class="hint">
+        <view class="line">{{hintLine1}}</view>
+        <view class="line">{{hintLine2}}</view>
+    </view>
+    <view class="hint">
+        <view class="line">{{host}}</view>
+    </view>
+    <view class="command"></view>
+</view>

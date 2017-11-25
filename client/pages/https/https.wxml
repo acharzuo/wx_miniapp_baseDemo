@@ -1,0 +1,15 @@
+<view class="lab https">
+    <view class="status">
+        <icon type="{{status}}" size="70" />
+    </view>
+    <view class="hint">
+        <view class="line">{{hintLine1}}</view>
+        <view class="line">{{hintLine2}}</view>
+    </view>
+    <view class="hint">
+        <view class="line">{{url}}</view>
+    </view>
+    <view class="command">
+        <button wx:if="{{status != 'success'}}" type="primary" bindtap="request" disabled="{{requesting}}">发送请求</button>
+    </view>
+</view>

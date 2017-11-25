@@ -1,0 +1,17 @@
+<view class="lab https">
+    <view class="status">
+        <icon type="{{status}}" size="70" />
+    </view>
+    <view class="hint">
+        <view class="line">{{hintLine1}}</view>
+        <view class="line">{{hintLine2}}</view>
+    </view>
+    <view class="hint">
+        <view class="line">{{url}}</view>
+    </view>
+    <view class="command">
+        <button type="primary" bindtap="connect" disabled="{{connecting || status == 'success'}}">连接</button>
+        <button bindtap="send" disabled="{{ status != 'success' }}">发送消息</button>
+        <button bindtap="close" disabled="{{ status != 'success' }}">断开</button>
+    </view>
+</view>

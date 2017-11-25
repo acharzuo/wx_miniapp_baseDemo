@@ -1,0 +1,16 @@
+{
+    "pages":[
+        "pages/index/index",
+        "pages/config/config",
+        "pages/https/https",
+        "pages/session/session",
+        "pages/websocket/websocket",
+        "pages/game/game"
+    ],
+    "window":{
+        "backgroundTextStyle":"light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": " ",
+        "navigationBarTextStyle":"black"
+    }
+}

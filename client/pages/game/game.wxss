@@ -1,0 +1,191 @@
+.root {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.my-side {
+    width: 1500rpx;
+    height: 1500rpx;
+    position: absolute;
+    bottom: -1125rpx;
+    left: -375rpx;
+    border-radius: 100%;
+    background: lightskyblue;
+    overflow: visible;
+}
+
+.your-side {
+    width: 1500rpx;
+    height: 1500rpx;
+    position: absolute;
+    top: -1500rpx;
+    left: -375rpx;
+    border-radius: 100%;
+    background: lightpink;
+    overflow: visible;
+    transition: top ease 0.6s;
+}
+
+.your-side.here {
+    top: -1125rpx;
+}
+
+.avatar {
+    position: absolute;
+    width: 172rpx;
+    height: 172rpx;
+    border-radius: 100%;
+    border: 8rpx solid white;
+    background-color: #f0f0f0;
+}
+
+.hand {
+    position: absolute;
+    width: 187rpx;
+    height: 187rpx;
+    border-radius: 100%;
+    overflow: visible;
+}
+
+.score, .streak {
+    position: absolute;
+    color: #334567;
+    width: 225rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.streak {
+    text-align: right;
+}
+
+.my-side .avatar {
+    left: 656.25rpx;
+    top: -93.75rpx;
+    transition: top ease .2s;
+}
+
+.my-side .hand {
+    left: 656.25rpx;
+    top: 150rpx;
+    transition: top ease .2s;
+}
+
+.root.playing .my-side .hand:active {
+    transform: scale(1.3);
+}
+
+.root.done .my-side .avatar {
+    top: 168.75rpx;
+}
+
+.root.done .my-side .hand {
+    top: -112.5rpx;
+}
+
+.my-side .score {
+    left: 412.5rpx;
+    bottom: 1162.5rpx;
+}
+
+.my-side .streak {
+    right: 412.5rpx;
+    bottom: 1162.5rpx;
+}
+
+.your-side .avatar {
+    left: 656.25rpx;
+    bottom: -93.75rpx;
+    transition: all ease .2s;
+    opacity: 0;
+}
+
+.your-side.here .avatar {
+    opacity: 1;
+}
+.your-side.move-1 .avatar {
+    transform: rotate(15deg);
+}
+.your-side.move-2 .avatar {
+    transform: rotate(-15deg);
+}
+
+.your-side .hand {
+    left: 656.25rpx;
+    bottom: 150rpx;
+    opacity: 0;
+    transition: bottom ease .2s;
+    transform: rotate(180deg);
+}
+
+.root.done .your-side .avatar {
+    bottom: 168.75rpx;
+}
+
+.root.done .your-side .hand {
+    bottom: -93.75rpx;
+    opacity: 1;
+}
+
+.your-side .score {
+    left: 412.5rpx;
+    top: 1106.25rpx;
+}
+
+.your-side .streak {
+    right: 412.5rpx;
+    top: 1106.25rpx;
+}
+
+
+.start-game, .request-computer {
+    position: absolute;
+    width: 200rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    margin-left: -100rpx;
+    bottom: 500rpx;
+    left: 50%;
+    display: none;
+}
+
+.request-computer {
+    width: 300rpx;
+    margin-left: -150rpx;
+}
+
+.root.finding .request-computer {
+    display: block;
+}
+
+.root.connected .start-game {
+    display: block;
+}
+
+.root.connected.playing .start-game,
+.root.finding .start-game {
+    display: none;
+}
+
+.game-info {
+    font-size: 75rpx;
+    position: absolute;
+    width: 750rpx;
+    height: 112.5rpx;
+    line-height: 112.5rpx;
+    margin-top: -56.25rpx;
+    bottom: 600rpx;
+    left: 0;
+    text-align: center;
+    opacity: 1;
+}
+
+.root.connected.root.playing .game-info,
+.root.connected.root.done .game-info {
+    opacity: 1;
+}
